@@ -20,7 +20,13 @@ root.geometry("900x900")
 root.title('点名器')
 root.resizable(False,False)
 
+label = tk.Label(root, text=stu,font=('黑体',35),width=30,height=5)
+label.place(x=150,y=300)
 
+def callback():
+    stu=random.choice(stu_list)
+b = tk.Button(root, text="点名", command=callback, width=20,height=10)
+b.place(x=300,y=750)
 
-label = tk.Label(win, text=stu,font=('宋体',20, 'bold italic'),width=30,height=5,)
 root.mainloop()
+
