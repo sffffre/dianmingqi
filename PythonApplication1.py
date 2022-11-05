@@ -1,16 +1,16 @@
 import tkinter as tk
 import random
 
-stu_list = ['stu1','stu2','stu3','stu4','stu5','stu6',
-	'stu7','stu8','stu9','stu10','stu11',
-	'stu12','stu13','stu14','stu15',
-               'stu16','stu17','stu18','stu19','stu20','stu21',
-	'stu23','stu24','stu25','stu26','stu27',
-	'stu28','stu29','stu30','stu31',
-	'stu32','stu33','stu34','stu35',
-               'stu36','stu37','stu38','stu39','stu40','stu41',
-	'stu42','stu43','stu44','stu45','stu46',
-	'stu47','stu48','stu49','stu50']
+stu_list = ['龚泉全','李知衡','李坤泽','蒲俊翔','刘芮含','秦子恒',
+	'戴吉满','彭康峻','郭隆浩','杨曜恺','代淳玺',
+	'亢泓博','龚子涵','李忻芸','张芮博',
+               '张家洲','丁翌航','唐粲然','张齐家','蔡述合',
+            '肖知止','彭诗涵','杨睿杰','刘知几','殷梦可',
+            '曾煜航','李君昊','吴思诺','乔瞰','陈禹竹',
+	'杜瀚霖','杜芋霏','刘衍辰','杨沛翰','张森越','覃索菲',
+            '杨沁妤','刘泫妙','赵思齐','李秉战',
+	'黄婉榕','卢彦朵','郑绍益','邓钦元','邓涵',
+	'魏梓涵','朱美霖','楚言熙','张翰予','龚泉全','龚泉全','龚泉全',]
 re_list = []
 new_list = []
 
@@ -25,8 +25,8 @@ last = []
 text = tk.StringVar()
 text.set(stu)
 
-label = tk.Label(root, text=stu,font=('黑体',35),width=30,height=5,textvariable=text)
-label.place(x=150,y=300)
+label = tk.Label(root, text=stu,font=('黑体',60),width=20,height=5,textvariable=text)
+label.place(x=0,y=50)
 
 def callback():
     while True:
@@ -35,13 +35,13 @@ def callback():
             pass
         else:
             re_list.append(stu)
-            if len(re_list) > 5:
+            if len(re_list) > 7:
                 del re_list[0]
             break
     
     text.set(stu)
 
 b = tk.Button(root, text="点名", command=callback, width=20,height=10)
-b.place(x=300,y=750)
+b.place(x=300,y=550)
 
 root.mainloop()
